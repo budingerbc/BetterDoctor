@@ -8,7 +8,7 @@
 
 _This site can be used to look up a medical issue to find an available doctor in Seattle_
 
-### User Story
+### Specifications
 
 * A user can search by their medical issue to locate a doctor
 * A user can search by doctor name to locate a doctor
