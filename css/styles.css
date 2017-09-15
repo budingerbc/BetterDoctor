@@ -6,3 +6,8 @@
 .glyphicon {
   margin-right: 5px;
 }
+
+.checkmarks {
+  max-width: 30px;
+  max-height: 30px;
+}
