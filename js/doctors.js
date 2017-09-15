@@ -23,8 +23,6 @@ export class Doctors {
         url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${that.name}&query=${that.illness}&location=47.608013,-122.335167,100&user_location=47.428718,-122.321394&skip=0&user_key=${apiKey}`;
       }
 
-      console.log(url);
-
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);
@@ -38,6 +36,11 @@ export class Doctors {
 
     promise.then(function(response) {
       let body = JSON.parse(response);
+
+      for (let i = 0; i < body.data.length; i++) {
+        that.doctors.push(body.data[i].profile);
+      }
     });
+    console.log(this.doctors);
   }
 }
